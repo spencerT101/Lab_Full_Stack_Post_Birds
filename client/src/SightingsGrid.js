@@ -5,9 +5,9 @@ const SightingsGrid = ({sightings, removeSighting}) => {
     });
     
     return (
-        <>
+        <div id="sightingsGrid">
             {sightingsList}
-        </>
+        </div>
     );
 
 }

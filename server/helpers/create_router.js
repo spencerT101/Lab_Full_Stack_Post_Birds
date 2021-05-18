@@ -29,6 +29,32 @@ const createRouter = function (collection) {
       });
   });
 
+  // Create
+  router.post('/', (req, res) => {
+    const newSighting = req.body;
+    collection
+      .insertOne(newSighting)
+      .then((document) => res.json(document) )
+      .catch((err) => {
+        console.error(err);
+        res.status(500);
+        res.json({ status: 500, error: err });
+      });
+  
+  })
+
+  // DELETE
+  router.delete('/:id', (req, res) => {
+    const deleteSighting = req.params.id
+      collection
+      .deleteOne({_id: ObjectID(deleteSighting)});
+      collection
+      .find()
+      .toArray()
+      .then((docs) => res.json(docs))
+
+  })
+
   return router;
 };
 

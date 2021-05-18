@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       <SightingsForm addSighting={addSighting}/>
-      <SightingsGrid sightings={birdSightings} removeSighting={removeSighting} />
+      <SightingsGrid sightings={birdSightings}  removeSighting={removeSighting} />
     </>
   );
 }

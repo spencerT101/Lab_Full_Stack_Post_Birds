@@ -9,13 +9,12 @@ const SightingCard = ({sighting, removeSighting}) => {
         })
     }
     return (
-        <>
+        <div class="flexItem" id="sightingsGrid ">
             <h1>{sighting.species}</h1>
             <p>Location: {sighting.location}</p>
             <p>Date: {sighting.date}</p>
             <button onClick={handleDelete}> 🗑 </button>
-            <hr></hr>
-        </>
+        </div>
     )
 }
 
